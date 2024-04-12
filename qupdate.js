@@ -1,5 +1,5 @@
 // Define the URL of the readme.txt file
-const readmeURL = '/qinfo.txt';
+const readmeURL = 'https://t.empties.it/qinfo.txt';
 var queueinfo = '';
 
 // Fetch the contents of the readme.txt file
