@@ -18,7 +18,7 @@ const lines = [
 
 var queueinfo = '';
 // Split the text into lines
-queueinfo = 'Coda: ' + lines[5].slice(0,-1) + '/' + lines[9].slice(0,-1) + ' [ ' + lines[7].slice(0,-1) + '/' + lines[9].slice(0,-1) + ' con <a href="/priority">priorità</a> ]';
+queueinfo = 'Coda: ' + lines[5] + '/' + lines[9] + ' [ ' + lines[7] + '/' + lines[9] + ' con <a href="/priority">priorità</a> ]';
 
 document.getElementById('queueinfo').innerHTML = queueinfo;
-document.getElementById('queuestate-'+lines[11].slice(0,-1)).removeAttribute('hidden');
+document.getElementById('queuestate-'+lines[11]).removeAttribute('hidden');
