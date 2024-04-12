@@ -1,26 +1,24 @@
-// Define the URL of the readme.txt file
-const readmeURL = 'https://t.empties.it/qinfo.txt';
+// Define the qinfo file
+const lines = [
+  'Posti liberi senza priorità [int]',
+  '0',
+  'Posti liberi con priorità [int]',
+  '0',
+  'Posti occupati senza priorità [int]',
+  '3',
+  'Posti occupati con priorità [int]',
+  '3',
+  'Posti totali [int]',
+  '3',
+  'Stato coda [dropdown] (full "full" / tbfl "to be full" / avlb "available" / prio "available only for priority)',
+  'full',
+  'Fine documento informazioni',
+];
+
+
 var queueinfo = '';
+// Split the text into lines
+queueinfo = 'Coda: ' + lines[5].slice(0,-1) + '/' + lines[9].slice(0,-1) + ' [ ' + lines[7].slice(0,-1) + '/' + lines[9].slice(0,-1) + ' con <a href="/priority">priorità</a> ]';
 
-// Fetch the contents of the readme.txt file
-fetch(readmeURL)
-  .then(response => {
-    // Check if the request was successful
-    if (!response.ok) {
-      throw new Error('Failed to fetch qinfo');
-    }
-    // Return the response text
-    return response.text();
-  })
-  .then(text => {
-    // Split the text into lines
-    const lines = text.split('\n');
-    queueinfo = 'Coda: ' + lines[5].slice(0,-1) + '/' + lines[9].slice(0,-1) + ' [ ' + lines[7].slice(0,-1) + '/' + lines[9].slice(0,-1) + ' con <a href="/priority">priorità</a> ]';
-
-    document.getElementById('queueinfo').innerHTML = queueinfo;
-    document.getElementById('queuestate-'+lines[11].slice(0,-1)).removeAttribute('hidden');
-  })
-  .catch(error => {
-    // Log any errors that occurred during the fetch
-    console.error('Error fetching qinfo:', error);
-  });
+document.getElementById('queueinfo').innerHTML = queueinfo;
+document.getElementById('queuestate-'+lines[11].slice(0,-1)).removeAttribute('hidden');
