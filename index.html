@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sito in Modalità Scuro</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>BoughtWork</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/qupdate.js"></script>
 </head>
 <body>
     <header>
-        <h1>Sito in Modalità Scuro</h1>
+        <h1><a href="/">BoughtWork</a></h1>
     </header>
     <main>
         <section class="product-list">
-            <h2>Prodotti</h2>
-            <!-- Lista dei prodotti va qui -->
+            <h2>Tavole disponibili</h2>
+            <p>
+                TAV11<br>
+                TAV12
+            </p>
+            <p>NOTA: Le tavole seguono la numerazione del materiale di Classroom, non del file caricato.</p>
         </section>
         <section class="order-form">
-            <h2>Effettua un Ordine</h2>
+            <h2>Richiedi una tavola</h2>
             <!-- Il modulo di ordine va qui -->
-            <p class="queue-full">La coda degli ordini è piena. Riprova più tardi.</p>
+            <p>Le tavole vanno richieste di persona o tramite messaggio.</p>
+            <p>Le richieste verranno <a href="/queue">messe in coda</a> ed eseguite.</p>
+            <p id="queueinfo"></p>
+            <p id="queuestate-full" class="queue-full" hidden>La coda è piena. Riprova più tardi.</p>
+            <p id="queuestate-tbfl" class="queue-tbfl" hidden>Corri! La coda è quasi piena!</p>
+            <p id="queuestate-avlb" class="queue-avlb" hidden>La coda ha dei posti liberi.</p>
+            <p id="queuestate-prio" class="queue-prio" hidden>La coda è piena ma <a href="/priority">sono disponibili posti priorità</a>.</p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Sito in Modalità Scuro. Tutti i diritti riservati.</p>
+        <p>&copy; 2024 BoughtWork. Tutti i diritti riservati.</p>
+        <p>Vedi anche <a href="https://hw.empties.it">HomeWork</a></p>
     </footer>
 </body>
 </html>
