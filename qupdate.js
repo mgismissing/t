@@ -12,6 +12,8 @@ const lines = [
   '3',
   'Stato coda [dropdown] (full "full" / tbfl "to be full" / avlb "available" / prio "available only for priority)',
   'full',
+  'Stato piazzamento nuovi ordini [dropdown] (full "full" / avlb "available")',
+  'full',
   'Fine documento informazioni',
 ];
 
@@ -24,6 +26,12 @@ document.getElementById('queueinfo').innerHTML = queueinfo;
 try {
   document.getElementById('queuestate-'+lines[11]).removeAttribute('hidden');
   document.getElementById('queuestate-err0').setAttribute('hidden', true);
+} catch (error) {
+  console.error(error);
+};
+try {
+  document.getElementById('buy-'+lines[13]).removeAttribute('hidden');
+  document.getElementById('buy-err0').setAttribute('hidden', true);
 } catch (error) {
   console.error(error);
 }

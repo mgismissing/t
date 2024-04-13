@@ -1,0 +1,6 @@
+NUOVO ORDINE
+Aggiorna lines di /qupdate.js
+Aggiungi ordine su monday.com
+
+NUOVA SETTIMANA
+Aggiorna tavole disponibili
