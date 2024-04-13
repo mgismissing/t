@@ -89,6 +89,14 @@ color.priority {
     background-clip: text;
 }
 
+color.priority a {
+    background: linear-gradient(to bottom, #faf, #f5f);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: underline;
+    text-decoration-color: #f5f;
+}
+
 color.red {
     color: #faa;
 }
@@ -108,7 +116,50 @@ color.buy {
 }
 
 color.money {
-    background: linear-gradient(to bottom, #990, #ff8);
+    background: linear-gradient(to bottom, #bb0, #ffa);
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+qstatus.normal.fixed {
+    font-weight: bold;
+    background: #fff;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+qstatus.priority.fixed {
+    font-weight: bold;
+    background: linear-gradient(to bottom, #faf, #f5f, #f5f);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+qstatus.normal.slippery {
+    font-weight: bold;
+    background: #aaa;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+qstatus.priority.slippery {
+    font-weight: bold;
+    background: #959;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+taskstatus.done {
+    font-weight: bold;
+    color: #8f8;
+}
+
+taskstatus.doing {
+    font-weight: bold;
+    color: #ff8;
+}
+
+taskstatus.todo {
+    font-weight: bold;
+    color: #f88;
 }
